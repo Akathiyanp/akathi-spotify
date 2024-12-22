@@ -2,7 +2,7 @@ import TopBar from "./components/TopBar";
 import SideBar from "./components/SideBar";
 import MainContent from "./components/MainContent";
 import MobileNav from "./components/MobileNav";
-import React, { useState } from "react";
+import  { useState } from "react";
 import NowPlaying from "./components/NowPlaying";
 
 function App() {

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Home, Search, Library } from 'lucide-react';
 
 export default function MobileNav() {
