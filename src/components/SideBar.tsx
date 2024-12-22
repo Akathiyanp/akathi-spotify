@@ -1,26 +1,27 @@
-import { X, Home,Search,Library,Plus,Heart} from "lucide-react";
+import { X, Home, Search, Library, Plus, Heart } from "lucide-react";
 
-interface SidebarProps{
-    onClose?: ()=>void;
+interface SidebarProps {
+  onClose?: () => void;
 }
-export default function SideBar({onClose}:SidebarProps) {
+export default function SideBar({ onClose }: SidebarProps) {
   return (
-    <>
-      <aside className="w-64 bg-black h-screen p-6 relative">
-        {onclose && (
-          <button className="absolute top-4 right-4 text-white md:hidden"
-          onClick={onClose}>
-            <X className="h-6 w-6" />
-          </button>
-        )}
-        <div className="text-white mb-8">
-            <svg
+    <aside className="w-64 bg-black h-screen p-6 relative">
+      {onClose && (
+        <button
+          className="absolute top-4 right-4 text-white md:hidden"
+          onClick={onClose}
+        >
+          <X className="h-6 w-6" />
+        </button>
+      )}
+      <div className="text-white mb-8">
+        <svg
           width="64px"
           height="64px"
           viewBox="-19.2 -19.2 230.40 230.40"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
-            >
+        >
           <g id="SVGRepo_bgCarrier" stroke-width="0">
             <rect
               x="-19.2"
@@ -44,48 +45,42 @@ export default function SideBar({onClose}:SidebarProps) {
             ></path>
           </g>
         </svg>
+      </div>
+
+      <nav className="space-y-6">
+        <div className="space-y-3">
+          <div className="flex items-center space-x-4 text-gray-400 hover:text-white transition">
+            <Home className="h-6 w-6" />
+            <span className="font-semibold">Home</span>
+          </div>
+          <div className="flex items-center space-x-4 text-gray-400 hover:text-white transition">
+            <Search className="h-6 w-6" />
+            <span className="font-semibold">Search</span>
+          </div>
+          <div className="flex items-center space-x-4 text-gray-400 hover:text-white transition">
+            <Library className="h-6 w-6" />
+            <span className="font-semibold">Your Library</span>
+          </div>
         </div>
 
-        <nav className="space-y-6">
-            <div className="space-y-3">
-                <div className="flex items-center space-x-4 text-gray-400">
-                        <Home className="h-6 w-6" />
-                        <span className="font-semibold">Home</span>
-                </div>
-                <div className="flex items-center space-x-4 text-gray-400 hover:text-white transition">
-                    <Search className="h-6 w-6"/>
-                    <span className="font-semibold">Search</span>
-                </div>
-                <div>
-                    <Library className="h-6 w-6" />
-                    <span className="font-semibold">Your Library</span>
-                </div>
+        <div className="space-y-3 pt-6 border-t border-gray-800">
+          <div className="flex items-center space-x-4 text-gray-400 hover:text-white transition">
+            <div className="bg-gray-400 hover:bg-white transition p-1 rounded-sm">
+              <Plus className="h-4 w-4" />
             </div>
-
-            <div className="space-y-3 pt-6 border-t border-gray-800">
-                <div className="flex items-center space-x-4 text-gray-400 hover:text-white transition">
-                    <Plus className="h-4 w-4"/>
-                    
-                </div>
-                <span className="font-semibold">Create Playlist</span>
+            <span className="font-semibold">Create Playlist</span>
+          </div>
+          <div className="flex items-center space-x-4 text-gray-400 hover:text-white transition">
+            <div
+              className="bg-gradient-to-br from-purple-700 to-blue-300 p-1
+                rounded-sm"
+            >
+              <Heart className="h-4 w-4 text-white" />
             </div>
-            <div className="flex items-center space-x-4 text-gray-400 hover:text-white transition">
-                <div className="bg-gradient-to-br from-purple-700 to-blue-300 p-1
-                rounded-sm">
-                    <Heart className="h-4 w-4 text-white"/>
-
-                </div>
-                <span className="font-semibold">Liked Songs</span>
-                
-            </div>
-
-        </nav>
-
-
-
-
-        
-      </aside>
-    </>
+            <span className="font-semibold">Liked Songs</span>
+          </div>
+        </div>
+      </nav>
+    </aside>
   );
 }
