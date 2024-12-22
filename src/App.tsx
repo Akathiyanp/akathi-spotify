@@ -1,5 +1,6 @@
 import TopBar from "./components/TopBar";
 import SideBar from "./components/sidebar";
+import MainContent from "./components/MainContent";
 import {useState} from "react"
 function App() {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
@@ -28,7 +29,8 @@ function App() {
       <div className="flex-1 flex flex-col w-full">
         
         <TopBar onMenuClick={() => setIsSideBarOpen(true)} />
-      </div>
+        <MainContent/>      </div>
+        
     </>
   );
 }
