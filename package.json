@@ -3,9 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://akathiyanp.github.io/akathi-spotify", 
-
+  "homepage": "http://akathiyanp.github.io/akathi-spotify",
   "scripts": {
+    "predeploy":"npm run build",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
