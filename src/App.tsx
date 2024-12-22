@@ -1,5 +1,5 @@
 import TopBar from "./components/TopBar";
-import SideBar from "./components/SideBar";
+import SideBar from "./components/sidebar";
 import {useState} from "react"
 function App() {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
